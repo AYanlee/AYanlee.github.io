@@ -1,0 +1,458 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>计算机网络体系结构 | AYanlee's Blog</title><meta name="keywords" content="Base"><meta name="author" content="AYanlee"><meta name="copyright" content="AYanlee"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="计算机网络体系结构（计算机网络及其构件所应完成的任务的精确定义）体系结构形成计算机通信最基本的任务 一条传输数据的通路  发起通信计算机对数据通路进行激活  告诉网络如何识别接收数据的计算机  查明对方计算机是否已经开机与网络连接  对方计算机是否做好接收文件和储存文件的准备  对各种差错事件的处理   计算机网络分成结构网络协议（水平的） 语法：规定数据传输格式  语义：规定所要完成的功能  同">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络体系结构">
+<meta property="og:url" content="http://example.com/2023/06/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/index.html">
+<meta property="og:site_name" content="AYanlee&#39;s Blog">
+<meta property="og:description" content="计算机网络体系结构（计算机网络及其构件所应完成的任务的精确定义）体系结构形成计算机通信最基本的任务 一条传输数据的通路  发起通信计算机对数据通路进行激活  告诉网络如何识别接收数据的计算机  查明对方计算机是否已经开机与网络连接  对方计算机是否做好接收文件和储存文件的准备  对各种差错事件的处理   计算机网络分成结构网络协议（水平的） 语法：规定数据传输格式  语义：规定所要完成的功能  同">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-d28a12bd76095097aa3fa9808a183372_1440w.jpg">
+<meta property="article:published_time" content="2023-06-19T11:44:00.000Z">
+<meta property="article:modified_time" content="2023-06-19T12:05:02.182Z">
+<meta property="article:author" content="AYanlee">
+<meta property="article:tag" content="Base">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic3.zhimg.com/80/v2-d28a12bd76095097aa3fa9808a183372_1440w.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/06/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"Author: AYanlee","link":"Link: ","source":"Source: AYanlee's Blog","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '计算机网络体系结构',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-06-19 20:05:02'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic1.zhimg.com/80/v2-e8df2d984c33eb8d0793434206da3c58_1440w.jpg?source=1940ef5c" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://pic3.zhimg.com/80/v2-92879d7d6ddae16c6c880bf936a2b2ae_1440w.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">AYanlee's Blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">计算机网络体系结构</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-06-19T11:44:00.000Z" title="Created 2023-06-19 19:44:00">2023-06-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-06-19T12:05:02.182Z" title="Updated 2023-06-19 20:05:02">2023-06-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/CI/">CI</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="计算机网络体系结构（计算机网络及其构件所应完成的任务的精确定义）"><a href="#计算机网络体系结构（计算机网络及其构件所应完成的任务的精确定义）" class="headerlink" title="计算机网络体系结构（计算机网络及其构件所应完成的任务的精确定义）"></a>计算机网络体系结构（计算机网络及其构件所应完成的任务的精确定义）</h1><h2 id="体系结构形成"><a href="#体系结构形成" class="headerlink" title="体系结构形成"></a>体系结构形成</h2><h3 id="计算机通信最基本的任务"><a href="#计算机通信最基本的任务" class="headerlink" title="计算机通信最基本的任务"></a>计算机通信最基本的任务</h3><ul>
+<li><p>一条传输数据的通路</p>
+</li>
+<li><p>发起通信计算机对数据通路进行激活</p>
+</li>
+<li><p>告诉网络如何识别接收数据的计算机</p>
+</li>
+<li><p>查明对方计算机是否已经开机与网络连接</p>
+</li>
+<li><p>对方计算机是否做好接收文件和储存文件的准备</p>
+</li>
+<li><p>对各种差错事件的处理</p>
+</li>
+</ul>
+<h2 id="计算机网络分成结构"><a href="#计算机网络分成结构" class="headerlink" title="计算机网络分成结构"></a>计算机网络分成结构</h2><h3 id="网络协议（水平的）"><a href="#网络协议（水平的）" class="headerlink" title="网络协议（水平的）"></a>网络协议（水平的）</h3><ul>
+<li><p>语法：规定数据传输格式</p>
+</li>
+<li><p>语义：规定所要完成的功能</p>
+</li>
+<li><p>同步：规定何种操作的条件、时序关系等</p>
+</li>
+</ul>
+<h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><ul>
+<li>相邻两层通过SAP进行交互</li>
+</ul>
+<h3 id="服务（垂直的）"><a href="#服务（垂直的）" class="headerlink" title="服务（垂直的）"></a>服务（垂直的）</h3><ul>
+<li><p>服务（只有能被高一层实体看到的功能才叫服务）</p>
+<ul>
+<li><p>服务分类</p>
+<ul>
+<li><p>面向连接服务和无连接服务</p>
+<ul>
+<li><p>面向服务连接：</p>
+<ul>
+<li><p>连接建立</p>
+</li>
+<li><p>数据传输</p>
+</li>
+<li><p>连接释放</p>
+</li>
+</ul>
+</li>
+<li><p>无服务链接</p>
+<ul>
+<li><p>不可靠服务</p>
+</li>
+<li><p>尽最大努力交付，并不保证通信可靠性（IP&#x2F;UDP）</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>可靠服务和不可靠服务</p>
+<ul>
+<li><p>可靠服务</p>
+<ul>
+<li><p>纠错</p>
+</li>
+<li><p>检错</p>
+</li>
+<li><p>应答</p>
+</li>
+</ul>
+</li>
+<li><p>不可靠服务</p>
+<ul>
+<li><p>正确性可靠性要靠用户保证</p>
+</li>
+<li><p>本身不提供可靠性保证</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>有应答服务和无应答服务</p>
+<ul>
+<li><p>有应答</p>
+<ul>
+<li>应答是指接收方在接收到数据后向发送方给出相应的应答</li>
+</ul>
+</li>
+<li><p>无应答</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>原语</p>
+<ul>
+<li><p>请求(USER-&gt;PRovider)</p>
+</li>
+<li><p>指示(PRVDR-&gt;USER)</p>
+</li>
+<li><p>响应</p>
+</li>
+<li><p>证实</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="分层"><a href="#分层" class="headerlink" title="分层"></a>分层</h3><ul>
+<li><p>优点</p>
+<ul>
+<li><p>各层独立</p>
+</li>
+<li><p>灵活性好</p>
+</li>
+<li><p>结构上分隔开</p>
+</li>
+<li><p>易于实现和维护</p>
+</li>
+<li><p>促进标准化工作</p>
+</li>
+</ul>
+</li>
+<li><p>缺点：在不同分层中相同功能可能重复出现，产生额外开销</p>
+</li>
+<li><p>各层需要完成的工作</p>
+<ul>
+<li><p>差错控制</p>
+</li>
+<li><p>流量控制</p>
+</li>
+<li><p>分段重装</p>
+</li>
+<li><p>复用分用</p>
+</li>
+<li><p>连接建立与释放</p>
+</li>
+</ul>
+</li>
+<li><p>原则</p>
+<ul>
+<li><p>降低复杂度、相对独立</p>
+</li>
+<li><p>各层之间界面清晰、交流尽可能少</p>
+</li>
+<li><p>功能定义独立于实现方法</p>
+</li>
+<li><p>上层单向使用下层提供的服务</p>
+</li>
+<li><p>促进标准化工作</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="OSI体系结构"><a href="#OSI体系结构" class="headerlink" title="OSI体系结构"></a>OSI体系结构</h2><h3 id="应用层（FTP、SMTP、HTTP）"><a href="#应用层（FTP、SMTP、HTTP）" class="headerlink" title="应用层（FTP、SMTP、HTTP）"></a>应用层（FTP、SMTP、HTTP）</h3><ul>
+<li>最高层，用户与网络的界面，最复杂、使用协议最多</li>
+</ul>
+<h3 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h3><ul>
+<li>处理两个通信系统中交换信息的表示方式。采用抽象的标准方法定义数据结构，数据压缩、加密解密</li>
+</ul>
+<h3 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h3><ul>
+<li>会话层利用传输层提供的端到端的服务，像表示层提供他的增值服务，为表示层或用户进程建立连接并在连接上有序传输数据，可以使用校验点使通信会话在通信失败时，从校验点继续恢复通信</li>
+</ul>
+<h3 id="运输层（TCP，UDP）"><a href="#运输层（TCP，UDP）" class="headerlink" title="运输层（TCP，UDP）"></a>运输层（TCP，UDP）</h3><ul>
+<li><p>运输单位：报文段TCP或用户数据UDP</p>
+</li>
+<li><p>任务：负责主机中两个进程之间的通信，为端到端连接提供可靠的运输服务（包括流量控制、差错控制、服务质量、数据传输管理）</p>
+</li>
+</ul>
+<h3 id="网络层（IP、IPX、ICMP、IGMP、ARP、RARP、OSPF）"><a href="#网络层（IP、IPX、ICMP、IGMP、ARP、RARP、OSPF）" class="headerlink" title="网络层（IP、IPX、ICMP、IGMP、ARP、RARP、OSPF）"></a>网络层（IP、IPX、ICMP、IGMP、ARP、RARP、OSPF）</h3><ul>
+<li><p>单位：数据报 分组</p>
+</li>
+<li><p>主要任务：把网络层的协议数据单元从源端传到目的端，未分组交换网上的不同主机提供通信服务并实现流量控制、拥塞控制、差错控制和网际互连、根据网络状况选出最佳的路径（路由选择）</p>
+</li>
+</ul>
+<h3 id="数据链路层（SDLC、HDLC、PPP、STP）"><a href="#数据链路层（SDLC、HDLC、PPP、STP）" class="headerlink" title="数据链路层（SDLC、HDLC、PPP、STP）"></a>数据链路层（SDLC、HDLC、PPP、STP）</h3><ul>
+<li><p>单位：帧 </p>
+</li>
+<li><p>任务：将网络层传来的IP数据报组装成帧、差错控制、流量控制、传输管理</p>
+</li>
+</ul>
+<h3 id="物理层（EIA-232C、EIA-x2F-TIA-RS-449、CCITT的X-21）"><a href="#物理层（EIA-232C、EIA-x2F-TIA-RS-449、CCITT的X-21）" class="headerlink" title="物理层（EIA-232C、EIA&#x2F;TIA RS-449、CCITT的X.21）"></a>物理层（EIA-232C、EIA&#x2F;TIA RS-449、CCITT的X.21）</h3><ul>
+<li><p>单位：bit</p>
+</li>
+<li><p>主要定义输出终端设备DTE和数据通信设备DCE</p>
+</li>
+<li><p>主要关注内容</p>
+<ul>
+<li><p>通信链路和通信节点的连接需要的接口参数</p>
+</li>
+<li><p>物理层通信链路上的传输信号意义和电气特征</p>
+</li>
+</ul>
+</li>
+<li><p>注意：传输信息所利用的一些物理媒体：双绞线、光缆、无线信道等并不是物理层协议之内，物理层协议也称物理层规程</p>
+</li>
+</ul>
+<h2 id="TCP-x2F-IP体系结构"><a href="#TCP-x2F-IP体系结构" class="headerlink" title="TCP&#x2F;IP体系结构"></a>TCP&#x2F;IP体系结构</h2><h3 id="应用层（用户到用户）"><a href="#应用层（用户到用户）" class="headerlink" title="应用层（用户到用户）"></a>应用层（用户到用户）</h3><ul>
+<li><p>域名解析服务DNS</p>
+</li>
+<li><p>电子邮件服务（SMTP）</p>
+</li>
+<li><p>超文本传输协议（HTTP）</p>
+</li>
+<li><p>文件传输协议FTP</p>
+</li>
+<li><p>虚拟终端协议Telnet</p>
+</li>
+</ul>
+<h3 id="运输层"><a href="#运输层" class="headerlink" title="运输层"></a>运输层</h3><ul>
+<li><p>TCP</p>
+</li>
+<li><p>UDP</p>
+</li>
+</ul>
+<h3 id="网际层IP"><a href="#网际层IP" class="headerlink" title="网际层IP"></a>网际层IP</h3><h3 id="网络接口层"><a href="#网络接口层" class="headerlink" title="网络接口层"></a>网络接口层</h3></article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Base/">Base</a></div><div class="post_share"><div class="social-share" data-image="https://pic3.zhimg.com/80/v2-d28a12bd76095097aa3fa9808a183372_1440w.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/gh/overtrue/share.js@master/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/06/19/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/"><img class="prev-cover" src="https://pic3.zhimg.com/80/v2-d28a12bd76095097aa3fa9808a183372_1440w.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">数据链路层</div></div></a></div><div class="next-post pull-right"><a href="/2022/05/12/OS/Hardware-of-OS/"><img class="next-cover" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Hardware of OS</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2023/06/19/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" title="数据链路层"><img class="cover" src="https://pic3.zhimg.com/80/v2-d28a12bd76095097aa3fa9808a183372_1440w.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-06-19</div><div class="title">数据链路层</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81NjM1OC8zMjgyMQ=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pic1.zhimg.com/80/v2-e8df2d984c33eb8d0793434206da3c58_1440w.jpg?source=1940ef5c" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">AYanlee</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">方知今日我是我</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%EF%BC%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8F%8A%E5%85%B6%E6%9E%84%E4%BB%B6%E6%89%80%E5%BA%94%E5%AE%8C%E6%88%90%E7%9A%84%E4%BB%BB%E5%8A%A1%E7%9A%84%E7%B2%BE%E7%A1%AE%E5%AE%9A%E4%B9%89%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">计算机网络体系结构（计算机网络及其构件所应完成的任务的精确定义）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%BD%A2%E6%88%90"><span class="toc-number">1.1.</span> <span class="toc-text">体系结构形成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%80%9A%E4%BF%A1%E6%9C%80%E5%9F%BA%E6%9C%AC%E7%9A%84%E4%BB%BB%E5%8A%A1"><span class="toc-number">1.1.1.</span> <span class="toc-text">计算机通信最基本的任务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%88%86%E6%88%90%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.</span> <span class="toc-text">计算机网络分成结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%EF%BC%88%E6%B0%B4%E5%B9%B3%E7%9A%84%EF%BC%89"><span class="toc-number">1.2.1.</span> <span class="toc-text">网络协议（水平的）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.2.2.</span> <span class="toc-text">接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%EF%BC%88%E5%9E%82%E7%9B%B4%E7%9A%84%EF%BC%89"><span class="toc-number">1.2.3.</span> <span class="toc-text">服务（垂直的）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%B1%82"><span class="toc-number">1.2.4.</span> <span class="toc-text">分层</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OSI%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-number">1.3.</span> <span class="toc-text">OSI体系结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%B1%82%EF%BC%88FTP%E3%80%81SMTP%E3%80%81HTTP%EF%BC%89"><span class="toc-number">1.3.1.</span> <span class="toc-text">应用层（FTP、SMTP、HTTP）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E7%A4%BA%E5%B1%82"><span class="toc-number">1.3.2.</span> <span class="toc-text">表示层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%9A%E8%AF%9D%E5%B1%82"><span class="toc-number">1.3.3.</span> <span class="toc-text">会话层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%BE%93%E5%B1%82%EF%BC%88TCP%EF%BC%8CUDP%EF%BC%89"><span class="toc-number">1.3.4.</span> <span class="toc-text">运输层（TCP，UDP）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%B1%82%EF%BC%88IP%E3%80%81IPX%E3%80%81ICMP%E3%80%81IGMP%E3%80%81ARP%E3%80%81RARP%E3%80%81OSPF%EF%BC%89"><span class="toc-number">1.3.5.</span> <span class="toc-text">网络层（IP、IPX、ICMP、IGMP、ARP、RARP、OSPF）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%EF%BC%88SDLC%E3%80%81HDLC%E3%80%81PPP%E3%80%81STP%EF%BC%89"><span class="toc-number">1.3.6.</span> <span class="toc-text">数据链路层（SDLC、HDLC、PPP、STP）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%A9%E7%90%86%E5%B1%82%EF%BC%88EIA-232C%E3%80%81EIA-x2F-TIA-RS-449%E3%80%81CCITT%E7%9A%84X-21%EF%BC%89"><span class="toc-number">1.3.7.</span> <span class="toc-text">物理层（EIA-232C、EIA&#x2F;TIA RS-449、CCITT的X.21）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP-x2F-IP%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-number">1.4.</span> <span class="toc-text">TCP&#x2F;IP体系结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%B1%82%EF%BC%88%E7%94%A8%E6%88%B7%E5%88%B0%E7%94%A8%E6%88%B7%EF%BC%89"><span class="toc-number">1.4.1.</span> <span class="toc-text">应用层（用户到用户）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%BE%93%E5%B1%82"><span class="toc-number">1.4.2.</span> <span class="toc-text">运输层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E9%99%85%E5%B1%82IP"><span class="toc-number">1.4.3.</span> <span class="toc-text">网际层IP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%8E%A5%E5%8F%A3%E5%B1%82"><span class="toc-number">1.4.4.</span> <span class="toc-text">网络接口层</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/06/19/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" title="数据链路层"><img src="https://pic3.zhimg.com/80/v2-d28a12bd76095097aa3fa9808a183372_1440w.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据链路层"/></a><div class="content"><a class="title" href="/2023/06/19/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" title="数据链路层">数据链路层</a><time datetime="2023-06-19T11:44:00.000Z" title="Created 2023-06-19 19:44:00">2023-06-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" title="计算机网络体系结构"><img src="https://pic3.zhimg.com/80/v2-d28a12bd76095097aa3fa9808a183372_1440w.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计算机网络体系结构"/></a><div class="content"><a class="title" href="/2023/06/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" title="计算机网络体系结构">计算机网络体系结构</a><time datetime="2023-06-19T11:44:00.000Z" title="Created 2023-06-19 19:44:00">2023-06-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/12/OS/Hardware-of-OS/" title="Hardware of OS"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hardware of OS"/></a><div class="content"><a class="title" href="/2022/05/12/OS/Hardware-of-OS/" title="Hardware of OS">Hardware of OS</a><time datetime="2022-05-12T15:48:34.000Z" title="Created 2022-05-12 23:48:34">2022-05-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/12/OS/What-is-OS/" title="What is OS"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="What is OS"/></a><div class="content"><a class="title" href="/2022/05/12/OS/What-is-OS/" title="What is OS">What is OS</a><time datetime="2022-05-11T16:09:53.000Z" title="Created 2022-05-12 00:09:53">2022-05-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/10/OS/Preface_of_OS/" title="Preface"><img src="https://pic2.zhimg.com/80/v2-a0209d156c3f82761980b93a694247b1_1440w.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Preface"/></a><div class="content"><a class="title" href="/2022/05/10/OS/Preface_of_OS/" title="Preface">Preface</a><time datetime="2022-05-10T06:26:28.000Z" title="Created 2022-05-10 14:26:28">2022-05-10</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://pic3.zhimg.com/80/v2-92879d7d6ddae16c6c880bf936a2b2ae_1440w.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By AYanlee</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !false) {
+  if (false) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><div class="aplayer no-destroy" data-id="6669290658" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="true"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
